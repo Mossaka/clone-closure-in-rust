@@ -14,6 +14,8 @@ pub struct StateBuilder {
 pub trait MyFn: Fn(&mut Ctx) + MyFnClone + Send + 'static {
 }
 
+impl<T: Fn(&mut Ctx) + Send + Clone + 'static> MyFn for T {}
+
 pub trait MyFnClone {
     fn clone_box(&self) -> Box<dyn MyFn>;
 }

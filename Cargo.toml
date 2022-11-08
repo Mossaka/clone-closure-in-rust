@@ -12,3 +12,6 @@ as-any = "0.3"
 
 [[bin]]
 name = "main2"
+
+[[bin]]
+name = "main3"
